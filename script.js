@@ -91,16 +91,25 @@ const navbarToggler = document.querySelector('.navbar-toggler');
 const navbarCollapse = document.querySelector('.navbar-collapse');
 
 navbarToggler.addEventListener('click', () => {
-    navbarCollapse.classList.toggle('show');
+    if (navbarCollapse.classList.contains('show')) {
+    } else {
+    navbarCollapse.classList.remove('show');
+
+    }
 });
 
+
+
+
 // Fechar o menu mobile ao clicar em um link
-const navLinks = document.querySelectorAll('.nav-link');
+const navLinks = document.querySelectorAll('.nav-link'); 
 
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         if (navbarCollapse.classList.contains('show')) {
             navbarCollapse.classList.remove('show');
+
+            console.log("existe nav collapse")
         }
     });
 });
