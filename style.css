@@ -112,6 +112,7 @@ body {
     margin-top: 1.6rem;
 }
 
+
 .swiper-slide img {
     width: 100%;
     height: 815px;
@@ -172,14 +173,19 @@ body {
     margin-bottom: 1rem;
 }
 
+
 .testimonial {
     background-color: var(--white);
+   
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
     height: 100%;
+    text-align: center;
+  
 }
+
+
 
 .brand-grid img {
     max-width: 100%;

@@ -9,10 +9,11 @@ var mainSwiper = new Swiper('.swiper', {
         prevEl: '.swiper-button-prev',
     },
     loop: true,
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 5000,
+    //     disableOnInteraction: false,
+    // },
+
     keyboard: {
         enabled: true,
     },
@@ -26,17 +27,15 @@ var mainSwiper = new Swiper('.swiper', {
 
 // Inicializando o Swiper para os depoimentos
 var testimonialSwiper = new Swiper('.testimonial-swiper', {
+    slidesPerView: 1,
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
     },
+    mousewheel: true,
     loop: true,
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
-    slidesPerView: 1,
-    spaceBetween: 30,
+    spaceBetween: 20,
+    keyboard: true,
     breakpoints: {
         768: {
             slidesPerView: 2,
@@ -44,15 +43,6 @@ var testimonialSwiper = new Swiper('.testimonial-swiper', {
         992: {
             slidesPerView: 3,
         },
-    },
-    keyboard: {
-        enabled: true,
-    },
-    a11y: {
-        prevSlideMessage: 'Depoimento anterior',
-        nextSlideMessage: 'Próximo depoimento',
-        firstSlideMessage: 'Este é o primeiro depoimento',
-        lastSlideMessage: 'Este é o último depoimento',
     },
 });
 
@@ -97,9 +87,6 @@ navbarToggler.addEventListener('click', () => {
 
     }
 });
-
-
-
 
 // Fechar o menu mobile ao clicar em um link
 const navLinks = document.querySelectorAll('.nav-link'); 
@@ -174,3 +161,4 @@ document.querySelector('.whatsapp-btn').addEventListener('click', (e) => {
     e.preventDefault();
     showNotification('Iniciando conversa no WhatsApp...');
 });
+
