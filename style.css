@@ -73,6 +73,9 @@ body {
     gap: 2rem;
     align-items: center;
 }
+.navbar-toggler-icon {
+    filter: invert(1);
+}
 
 .btn-primary {
     background-color: var(--primary-color);
@@ -411,6 +414,14 @@ div .map-container {
     .slide-content h2 {
         font-size: 2rem;
     }
+
+    .slide-content p {
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 3rem 0;
+    }
 }
 
 @media (max-width: 576px) {
@@ -430,6 +441,10 @@ div .map-container {
     .contact-info a {
         font-size: 1.5rem;
         margin: 0 0.5rem;
+    }
+
+    .hero-div {
+        height: 300px;
     }
 }
 
